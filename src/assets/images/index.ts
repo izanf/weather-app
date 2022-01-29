@@ -1,0 +1,11 @@
+export { default as clear } from './Clear.png';
+export { default as cloudBG } from './Cloud-background.png';
+export { default as hall } from './Hall.png';
+export { default as heavyCloud } from './HeavyCloud.png';
+export { default as heavyRain } from './HeavyRain.png';
+export { default as lightCloud } from './LightCloud.png';
+export { default as lightRain } from './LightRain.png';
+export { default as shower } from './Shower.png';
+export { default as sleet } from './Sleet.png';
+export { default as snow } from './Snow.png';
+export { default as thunderstorm } from './Thunderstorm.png';
