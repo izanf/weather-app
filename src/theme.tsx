@@ -17,6 +17,7 @@ const theme = {
     grayLight: '#E7E7EB',
     grayDark: '#A09FB1',
     grayDarker: '#88869D',
+    grayDarkest: '#585676',
     blue: '#3C47E9'
   },
   borderRadius: {

@@ -1,14 +1,15 @@
 import React from 'react';
 
-import Sidebar from 'components/Sidebar';
-import { Wrapper, Content } from './styles';
+import Sidebar from './Sidebar';
+import Box from 'components/Box';
+import { Wrapper } from './styles';
 
 const Dashboard = () => (
   <Wrapper>
     <Sidebar />
-    <Content>
+    <Box flex="2.5" py="1.5rem" px="3rem">
       Content here
-    </Content>
+    </Box>
   </Wrapper>
 )
 

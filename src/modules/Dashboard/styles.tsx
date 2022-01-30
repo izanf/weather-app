@@ -5,7 +5,3 @@ export const Wrapper = styled.div`
   height: 100%;
   background: ${({ theme }) => theme.colors.primary}}
 `;
-
-export const Content = styled.div`
-  flex: 4;
-`;

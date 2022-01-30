@@ -1,4 +1,4 @@
-import Searchbar from 'components/Searchbar';
+import Searchbar from '../Searchbar';
 import Icon from 'components/Icon';
 import Image from 'components/Image';
 import Box from 'components/Box';
