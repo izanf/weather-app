@@ -1,4 +1,12 @@
 const theme = {
+  fontSize: {
+    xsmall: '.9rem',
+    small: '1rem',
+    medium: '1.1rem',
+    large: '1.2rem',
+    xlarge: '2rem',
+    xxlarge: '4rem'
+  },
   colors: {
     transparent: 'transparent',
     white: '#FFFFFF',

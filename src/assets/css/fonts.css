@@ -1,36 +1,36 @@
 @font-face {
-  font-family: 'RalewayLight';
-  font-weight: lighter;
+  font-family: 'Raleway';
+  font-weight: 300;
   src: url(../fonts/Raleway-Light.ttf) format('truetype');
 }
 
 @font-face {
   font-family: 'Raleway';
-  font-weight: normal;
+  font-weight: 400;
   src: url(../fonts/Raleway-Regular.ttf) format('truetype');
 }
 
 @font-face {
-  font-family: 'RalewayMedium';
-  font-weight: medium;
+  font-family: 'Raleway';
+  font-weight: 500;
   src: url(../fonts/Raleway-Medium.ttf) format('truetype');
 }
 
 @font-face {
-  font-family: 'RalewayBold';
-  font-weight: bold;
+  font-family: 'Raleway';
+  font-weight: 700;
   src: url(../fonts/Raleway-Bold.ttf) format('truetype');
 }
 
 @font-face {
-  font-family: 'MontserratMedium';
-  font-weight: medium;
-  src: url(../fonts/Raleway-Medium.otf) format('opentype');
+  font-family: 'Montserrat';
+  font-weight: 500;
+  src: url(../fonts/Montserrat-Medium.otf) format('opentype');
 }
 
 @font-face {
-  font-family: 'MontserratBold';
-  font-weight: bold;
-  src: url(../fonts/Raleway-Bold.otf) format('opentype');
+  font-family: 'Montserrat';
+  font-weight: 700;
+  src: url(../fonts/Montserrat-Bold.otf) format('opentype');
 }
 

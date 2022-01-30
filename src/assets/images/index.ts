@@ -1,6 +1,6 @@
 export { default as clear } from './Clear.png';
 export { default as cloudBG } from './Cloud-background.png';
-export { default as hall } from './Hall.png';
+export { default as hail } from './Hail.png';
 export { default as heavyCloud } from './HeavyCloud.png';
 export { default as heavyRain } from './HeavyRain.png';
 export { default as lightCloud } from './LightCloud.png';
