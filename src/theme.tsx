@@ -18,7 +18,8 @@ const theme = {
     grayDark: '#A09FB1',
     grayDarker: '#88869D',
     grayDarkest: '#585676',
-    blue: '#3C47E9'
+    blue: '#3C47E9',
+    yellow: '#FFEC65',
   },
   borderRadius: {
     xsmall: '.25rem',
