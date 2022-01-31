@@ -5,10 +5,13 @@ import styled from 'styled-components';
 interface IIconProps extends TypographyProps {
   name: string;
   color?: string;
+  onClick?: (e?: React.MouseEvent<HTMLElement>) => void;
+  cursor?: string;
 }
 
 const Span = styled.span<Partial<IIconProps>>`
   color: ${({ theme, color }) => theme.colors[color ?? 'white']};
+  cursor: ${({ cursor }) => cursor};
   ${typography}
 `;
 

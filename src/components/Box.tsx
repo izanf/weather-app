@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import {
   flexbox, FlexboxProps, layout, LayoutProps, grid, GridProps,
-  space, SpaceProps, color, ColorProps, border, BorderProps
+  space, SpaceProps, color, ColorProps, border, BorderProps,
+  position, PositionProps
 } from 'styled-system';
 
-interface IBoxProps extends FlexboxProps, LayoutProps, GridProps, SpaceProps, ColorProps, BorderProps {
+interface IBoxProps extends FlexboxProps, LayoutProps, GridProps, SpaceProps, ColorProps, BorderProps, PositionProps {
   cursor?: string;
 }
 
@@ -15,6 +16,7 @@ const Box = styled.div<IBoxProps>`
   ${space};
   ${color};
   ${border};
+  ${position};
   cursor: ${({ cursor }) => cursor ?? 'default'};
 `;
 

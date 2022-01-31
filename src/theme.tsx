@@ -13,6 +13,7 @@ const theme = {
     black: '#000000',
     primary: '#100E1D',
     primaryLight: '#1E213A',
+    grayy: '#616475',
     gray: '#6E707A',
     grayLight: '#E7E7EB',
     grayDark: '#A09FB1',
