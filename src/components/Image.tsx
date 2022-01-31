@@ -25,7 +25,7 @@ const Img = styled.img<{ objectFit?: string }>`
   object-fit: ${({ objectFit }) => objectFit};
 `;
 
-type ImageProps = {
+interface IImageProps extends SpaceProps {
   name?: string;
   src?: string;
   alt: string;
@@ -36,7 +36,7 @@ type ImageProps = {
 
 const Image = ({
   name, src, alt, objectFit, ...props
-}: ImageProps) => {
+}: IImageProps) => {
   return (
     <Figure {...props}>
       <Img
