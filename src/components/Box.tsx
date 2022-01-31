@@ -5,6 +5,7 @@ import {
 } from 'styled-system';
 
 interface IBoxProps extends FlexboxProps, LayoutProps, GridProps, SpaceProps, ColorProps, BorderProps {
+  cursor?: string;
 }
 
 const Box = styled.div<IBoxProps>`
@@ -14,6 +15,7 @@ const Box = styled.div<IBoxProps>`
   ${space};
   ${color};
   ${border};
+  cursor: ${({ cursor }) => cursor ?? 'default'};
 `;
 
 export default Box;
