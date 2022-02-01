@@ -1,11 +1,32 @@
+import React, { useState } from 'react';
+
+import { useWeather } from 'hooks';
+
 import { Box, Input, Button, Icon } from 'components';
 import SelectItems from './SelectItems';
+
+import { CityBasicInfo } from 'types/weather';
 
 interface ISearchModal {
   onClose: () => void;
 };
 
 const SearchModal = ({ onClose }: ISearchModal) => {
+  const { fetchSearch, setSelectedCity } = useWeather();
+  const [search, setSearch] = useState('');
+  const [data, setData] = useState<CityBasicInfo[]>([]);
+
+  const onSearch = async () => {
+    const response = await fetchSearch(search);
+
+    setData(response);
+  }
+
+  const handleSelect = (selectedCity: CityBasicInfo): void => {
+    setSelectedCity(selectedCity);
+    onClose();
+  }
+
   return (
     <Box
       flex="1"
@@ -19,12 +40,13 @@ const SearchModal = ({ onClose }: ISearchModal) => {
         <Input
           leftIcon="search"
           placeholder="search location"
-          onChange={() => console.log('onChange')}
+          value={search}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)}
         />
-        <Button ml="1rem" bg="blue">Search</Button>
+        <Button ml="1rem" bg="blue" onClick={onSearch}>Search</Button>
       </Box>
-      <Box mt="3rem">
-        <SelectItems />
+      <Box mt="3rem" overflow="auto">
+        <SelectItems data={data} onSelect={handleSelect} />
       </Box>
     </Box>
   )

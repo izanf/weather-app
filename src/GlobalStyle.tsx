@@ -10,6 +10,10 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
+  html {
+    overflow: hidden;
+  }
+
   #root {
     height: 100%;
   }
