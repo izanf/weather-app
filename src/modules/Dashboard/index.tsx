@@ -4,8 +4,17 @@ import MetricToggle from './MetricToggle';
 import ForecastDays from './ForecastDays';
 import Highlights from './Highlights';
 import { Wrapper } from './styles';
+import { useWeather } from 'hooks';
+import { useEffect } from 'react';
 
 const Dashboard = () => {
+  const { cityInfo, fetchCityData } = useWeather();
+  const forecastDaysData = cityInfo?.consolidated_weather?.slice(1);
+
+  useEffect(() => {
+    fetchCityData(44418);
+  }, [])
+
   return (
     <Wrapper>
       <Sidebar />
@@ -14,7 +23,7 @@ const Dashboard = () => {
           <MetricToggle />
         </Box>
         <Box mt="4rem">
-          <ForecastDays />
+          <ForecastDays data={forecastDaysData} />
         </Box>
         <Box mt="4rem">
           <Text fontSize="1.5rem" fontWeight="bold" color="grayLight">Today's Highlights</Text>
