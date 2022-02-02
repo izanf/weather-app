@@ -12,18 +12,18 @@ interface ISearchModal {
 };
 
 const SearchModal = ({ onClose }: ISearchModal) => {
-  const { fetchSearch, setSelectedCity } = useWeather();
+  const { fetchSearch, fetchCityData } = useWeather();
   const [search, setSearch] = useState('');
   const [data, setData] = useState<CityBasicInfo[]>([]);
 
   const onSearch = async () => {
     const response = await fetchSearch(search);
 
-    setData(response);
+    setData(response as CityBasicInfo[]);
   }
 
   const handleSelect = (selectedCity: CityBasicInfo): void => {
-    setSelectedCity(selectedCity);
+    fetchCityData(selectedCity.woeid);
     onClose();
   }
 

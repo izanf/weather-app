@@ -1,6 +1,6 @@
 import ky from 'ky';
 
-import { CityBasicInfo } from 'types/weather';
+import { CityBasicInfo, CityInfo } from 'types/weather';
 
 const BASE_URL = process.env.REACT_APP_WEATHER_API_URL;
 
@@ -13,3 +13,9 @@ export const fetchWeather = async (search: string): Promise<CityBasicInfo[]> => 
 
   return response;
 }
+
+export const fetchCityData = async (cityId: number): Promise<CityInfo> => {
+  const response: CityInfo = await api.get(`location/${cityId}`).json();
+
+  return response;
+};
